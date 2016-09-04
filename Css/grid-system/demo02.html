@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>中型和大型设备</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../bootstrap-3.3.7/css/bootstrap.min.css">
+    <style>
+        .temp div {background: #ccc; border:1px solid red}
+        #screenInfo {margin-top: 20px; padding: 20px}
+    </style>
+</head>
+<body>
+<!--
+    大型设备: 1200px     lg
+    中型设备: 992px      md
+    小型设备: 768px      sm
+    xs设备: 小于768px    xs
+-->
+<div class="container">
+    <h1>各设备下显示的尺寸</h1>
+    <ul>
+        <li>大型设备: 4 - 8 <span class="bg-info">&gt;=1200px</span></li>
+        <li>中型设备: 6 - 6 <span class="bg-info">&gt;=992px</span></li>
+        <li>小型设备: 9 - 3 <span class="bg-info">&gt;=768px</span></li>
+        <li>微型设备: 6 - 6 <span class="bg-info">&lt;768px</span></li>
+    </ul>
+    <div class="row temp">
+        <div class="col-md-6 col-lg-4 col-sm-9 col-xs-6">
+            <p>我们都是渣渣</p>
+        </div>
+        <div class="col-md-6 col-lg-8 col-sm-3 col-xs-6">
+            <p>我们都是大神</p>
+        </div>
+    </div>
+</div>
+<div class="container bg-success" id="screenInfo">
+
+</div>
+
+<script src="../../jQuery/jquery-1.11.3.min.js"></script>
+<script src="../../bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $(window).resize(function () {
+            getInfo();
+        });
+        function getInfo() {
+            var rule = '屏幕宽度:<strong>' + $(document).width() + '</strong>px';
+            $('#screenInfo').html(rule);
+        }
+        getInfo();
+    });
+</script>
+
+</body>
+</html>
