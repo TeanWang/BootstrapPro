@@ -1,5 +1,5 @@
 # BootstrapPro
-Bootstrap Demo by `Tean`
+> Bootstrap Demo by `Tean`
 
 ##目录结构
 
